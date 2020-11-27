@@ -27,7 +27,7 @@ scriptencoding utf-8
 " First, let's define an empty dictionary and assign it to the "palette"
 " variable. The # is a separator that maps with the directory structure. If
 " you get this wrong, Vim will complain loudly.
-let g:airline#themes#dark_minimal#palette = {}
+let g:airline#themes#weynot_airline#palette = {}
 
 " First let's define some arrays. The s: is just a VimL thing for scoping the
 " variables to the current script. Without this, these variables would be
@@ -35,10 +35,10 @@ let g:airline#themes#dark_minimal#palette = {}
 " to the dictionary.  The array is in the format:
 " [ guifg, guibg, ctermfg, ctermbg, opts ]. See "help attr-list" for valid
 " values for the "opt" value.
-let s:N1   = [ '#00005f' , '#dfff00' , 17  , 190 ]
+let s:N1   = [ '#0b0b0b' , '#912fcb' , 17  , 190 ]
 let s:N2   = [ '#ffffff' , '#444444' , 255 , 238 ]
-let s:N3   = [ '#9cffd3' , '#202020' , 85  , 234 ]
-let g:airline#themes#dark_minimal#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
+let s:N3   = [ '#ffa800' , '#202020' , 85  , 234 ]
+let g:airline#themes#weynot_airline#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
 
 " Accents are used to give parts within a section a slightly different look or
 " color. Here we are defining a "red" accent, which is used by the 'readonly'
@@ -47,11 +47,11 @@ let g:airline#themes#dark_minimal#palette.normal = airline#themes#generate_color
 " this means is that regardless of which section the part is defined in, it
 " will be red instead of the section's foreground color. You can also have
 " multiple parts with accents within a section.
-let g:airline#themes#dark_minimal#palette.accents = {
+let g:airline#themes#weynot_airline#palette.accents = {
       \ 'red': [ '#ff0000' , '' , 160 , ''  ]
       \ }
 
-let pal = g:airline#themes#dark_minimal#palette
+let pal = g:airline#themes#weynot_airline#palette
 for item in ['insert', 'replace', 'visual', 'inactive', 'ctrlp']
   " why doesn't this work?
   " get E713: cannot use empty key for dictionary
